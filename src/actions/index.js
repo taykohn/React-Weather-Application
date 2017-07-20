@@ -1,18 +1,25 @@
+import axios from 'axios';
 
-export const GET_RANDOM_NUMBERS = 'GET_RANDOM_NUMBERS';
+const ROOT_URL = `http://59dcef0f.ngrok.io`;
 
-export function getRandomNumbers() {
-    // const payload = Math.floor(Math.random() * (100));
+export const GET_PANEL_VALUES = 'GET_PANEL_VALUES';
+
+export async function getPanelValues() {
+    const url = `${ROOT_URL}/all`
+    let request = await axios.get(url);
+
+    console.log("Request: ", request);
+
     const payload = {
-        colorValue: Math.floor(Math.random() * (100)),
-        knobValue: Math.floor(Math.random() * (100)),
-        airTemp: Math.floor(Math.random() * (100)),
-        waterTemp: Math.floor(Math.random() * (100)),
-        humidity: Math.floor(Math.random() * (100))
+        airTemp: request.data[0].value,
+        waterTemp: request.data[1].value,
+        humidity: request.data[2].value,
+        colorValue: request.data[3].value,
+        knobValue: request.data[4].value
     };
-    
+
     return {
-        type:GET_RANDOM_NUMBERS,
+        type:GET_PANEL_VALUES,
         payload: payload
     };
 }

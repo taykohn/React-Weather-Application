@@ -1,16 +1,16 @@
-import { GET_RANDOM_NUMBERS } from '../actions';
+import { GET_PANEL_VALUES } from '../actions';
 
 const initialState = {
-    colorValue: 0,
-    knobValue: 0,
-    airTemp: 0,
-    waterTemp: 0,
-    humidity: 0
+    colorValue: "-",
+    knobValue: "-",
+    airTemp: "-",
+    waterTemp: "-",
+    humidity: "-"
 };
 
 export default function(state = initialState, action) {
     switch(action.type) {
-        case GET_RANDOM_NUMBERS:
+        case GET_PANEL_VALUES:
             return {
                 ...state, 
                 colorValue: action.payload.colorValue,

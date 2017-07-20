@@ -1,11 +1,11 @@
 import { Panel } from 'react-bootstrap';
 import React from 'react';
 
-const CardDetail = ({title, randomNumber, bsStyle}) => {
+const CardDetail = ({title, value}) => {
     return (
         <div>
             <Panel header={title} bsStyle="info" >
-                {randomNumber}
+                {value}
             </Panel>
         </div>
     );

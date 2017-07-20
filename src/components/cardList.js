@@ -13,19 +13,19 @@ class CardList extends Component {
                     <tbody>
                         <tr>
                             <td>
-                                <CardDetail title="Color" randomNumber={colorValue} />
+                                <CardDetail title="Color" value={colorValue} />
                             </td>
                             <td>
-                                <CardDetail title="Knob Value" randomNumber={knobValue}/>
+                                <CardDetail title="Knob Value" value={knobValue}/>
                             </td>
                             <td>
-                                <CardDetail title="Air Temp" randomNumber={airTemp}/>
+                                <CardDetail title="Air Temp" value={airTemp}/>
                             </td>
                             <td>
-                                <CardDetail title="Water Temp" randomNumber={waterTemp}/>
+                                <CardDetail title="Water Temp" value={waterTemp}/>
                             </td>
                             <td>
-                                <CardDetail title="Humidity" randomNumber={humidity}/>
+                                <CardDetail title="Humidity" value={humidity}/>
                             </td>
                         </tr>
                     </tbody>
