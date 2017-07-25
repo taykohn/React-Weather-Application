@@ -28,6 +28,7 @@ describe('CardDetail', () => {
 
     it('renders CardDetail component with properties', () =>{
         let componentProps = componentWithProps.instance.props.children.props;
+        let tree = componentWithProps.instance.props.children;
 
         expect(componentProps).to.not.be.empty;
         expect(componentProps).contains({ title: "Temperature",

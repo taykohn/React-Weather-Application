@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const ROOT_URL = `http://59dcef0f.ngrok.io`;
+const ROOT_URL = `http://f2cca9a3.ngrok.io`;
 
 export const GET_PANEL_VALUES = 'GET_PANEL_VALUES';
 
@@ -9,7 +9,7 @@ export async function getPanelValues() {
     let request = await axios.get(url);
 
     console.log("Request: ", request);
-
+ 
     const payload = {
         airTemp: request.data[0].value,
         waterTemp: request.data[1].value,

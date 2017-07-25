@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { Button } from 'react-bootstrap';
 import { getPanelValues } from '../actions';
 import { connect } from 'react-redux';
@@ -17,5 +17,7 @@ class UpdateButt extends Component {
         );
     }
 }
+
+UpdateButt.propTypes = { getPanelValues: PropTypes.func };
 
 export default connect(null, { getPanelValues })(UpdateButt);

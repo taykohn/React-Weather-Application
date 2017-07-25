@@ -1,9 +1,6 @@
 import { expect, renderComponent } from '../test_helper';
 import TestUtils from 'react-addons-test-utils';
-import React from 'react';
-import CardList from '../../components/cardList'
-import CardDetail from '../../components/cardDetail'
-
+import CardList from '../../components/cardList';
 
 describe('CardList', () => {
 
@@ -12,11 +9,16 @@ describe('CardList', () => {
 
     beforeEach(() => {
         component = renderComponent(CardList);
-        componentWithProps = renderComponent(CardList, {colorValue: 1, knobValue: 2, airTemp: 3, waterTemp: 4, humidity: 5});
+        componentWithProps = renderComponent(CardList, {colorValue: 1, 
+            knobValue: 2,
+            airTemp: 3,
+            waterTemp: 4,
+            humidity: 5
+        });
     });
 
     it('renders without crashing', () => {
-        expect(true).to.be.true
+        expect(true).to.be.true;
     });
 
     it('renders CardList component', () => {
